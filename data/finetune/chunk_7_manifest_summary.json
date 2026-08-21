@@ -1,0 +1,15 @@
+{
+  "source": "A Comprehensive Central Kurdish Sound Dataset",
+  "chunk": "chunk_7",
+  "total_files": 100000,
+  "accepted": 93351,
+  "rejected": 6649,
+  "total_duration_hours": 146.01,
+  "avg_duration_seconds": 5.63,
+  "gender_distribution": {},
+  "quality_filters": {
+    "min_duration_s": 1.0,
+    "max_duration_s": 30.0,
+    "min_text_len": 3
+  }
+}

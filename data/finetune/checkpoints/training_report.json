@@ -1,0 +1,87 @@
+{
+  "status": "completed",
+  "base_model": "openbmb/VoxCPM2",
+  "dataset": {
+    "total": 93351,
+    "train": 88684,
+    "eval": 4667,
+    "hours": 138.7
+  },
+  "hyperparams": {
+    "lora_rank": 16,
+    "lora_alpha": 32,
+    "batch_size": 8,
+    "learning_rate": 0.0001,
+    "seed": 42
+  },
+  "results": {
+    "best_loss": 0.1801,
+    "best_cer": 0.015,
+    "eval_loss": 0.1891,
+    "eval_cer": 0.0165,
+    "total_steps": 5000,
+    "best_checkpoint_step": 5000
+  },
+  "checkpoints": [
+    {
+      "step": 500,
+      "loss": 1.9169,
+      "cer": 0.0967,
+      "path": "data\\finetune\\checkpoints\\checkpoint_step_500"
+    },
+    {
+      "step": 1000,
+      "loss": 1.4293,
+      "cer": 0.0757,
+      "path": "data\\finetune\\checkpoints\\checkpoint_step_1000"
+    },
+    {
+      "step": 1500,
+      "loss": 1.0775,
+      "cer": 0.0573,
+      "path": "data\\finetune\\checkpoints\\checkpoint_step_1500"
+    },
+    {
+      "step": 2000,
+      "loss": 0.8117,
+      "cer": 0.0482,
+      "path": "data\\finetune\\checkpoints\\checkpoint_step_2000"
+    },
+    {
+      "step": 2500,
+      "loss": 0.6009,
+      "cer": 0.0289,
+      "path": "data\\finetune\\checkpoints\\checkpoint_step_2500"
+    },
+    {
+      "step": 3000,
+      "loss": 0.5135,
+      "cer": 0.037,
+      "path": "data\\finetune\\checkpoints\\checkpoint_step_3000"
+    },
+    {
+      "step": 3500,
+      "loss": 0.3917,
+      "cer": 0.0261,
+      "path": "data\\finetune\\checkpoints\\checkpoint_step_3500"
+    },
+    {
+      "step": 4000,
+      "loss": 0.3129,
+      "cer": 0.0204,
+      "path": "data\\finetune\\checkpoints\\checkpoint_step_4000"
+    },
+    {
+      "step": 4500,
+      "loss": 0.277,
+      "cer": 0.0198,
+      "path": "data\\finetune\\checkpoints\\checkpoint_step_4500"
+    },
+    {
+      "step": 5000,
+      "loss": 0.2297,
+      "cer": 0.0242,
+      "path": "data\\finetune\\checkpoints\\checkpoint_step_5000"
+    }
+  ]
+}
