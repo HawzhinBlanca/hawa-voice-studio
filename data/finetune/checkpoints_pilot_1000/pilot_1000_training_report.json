@@ -1,0 +1,98 @@
+{
+  "status": "completed",
+  "device": "cuda",
+  "gpu_name": "NVIDIA GeForce RTX 4090",
+  "dataset_name": "chunk_7_kurdish_speech",
+  "total_utterances": 1000,
+  "train_utterances": 950,
+  "eval_utterances": 50,
+  "epochs": 10,
+  "total_steps": 1190,
+  "total_training_time_seconds": 68.74,
+  "final_train_loss": 0.0673,
+  "final_eval_loss": 0.0649,
+  "best_eval_loss": 0.0649,
+  "final_est_cer": 0.012,
+  "training_history": [
+    {
+      "epoch": 1,
+      "global_step": 119,
+      "train_loss": 2.4014,
+      "eval_loss": 0.3036,
+      "est_cer": 0.0121,
+      "lr": 0.00019513012337136796
+    },
+    {
+      "epoch": 2,
+      "global_step": 238,
+      "train_loss": 0.154,
+      "eval_loss": 0.1212,
+      "est_cer": 0.012,
+      "lr": 0.00018099719094030728
+    },
+    {
+      "epoch": 3,
+      "global_step": 357,
+      "train_loss": 0.1237,
+      "eval_loss": 0.1044,
+      "est_cer": 0.012,
+      "lr": 0.00015898463260310096
+    },
+    {
+      "epoch": 4,
+      "global_step": 476,
+      "train_loss": 0.1063,
+      "eval_loss": 0.0926,
+      "est_cer": 0.012,
+      "lr": 0.00013124719094030718
+    },
+    {
+      "epoch": 5,
+      "global_step": 595,
+      "train_loss": 0.0922,
+      "eval_loss": 0.0836,
+      "est_cer": 0.012,
+      "lr": 0.00010049999999999995
+    },
+    {
+      "epoch": 6,
+      "global_step": 714,
+      "train_loss": 0.0816,
+      "eval_loss": 0.0781,
+      "est_cer": 0.012,
+      "lr": 6.975280905969281e-05
+    },
+    {
+      "epoch": 7,
+      "global_step": 833,
+      "train_loss": 0.0767,
+      "eval_loss": 0.07,
+      "est_cer": 0.012,
+      "lr": 4.2015367396899006e-05
+    },
+    {
+      "epoch": 8,
+      "global_step": 952,
+      "train_loss": 0.0711,
+      "eval_loss": 0.0674,
+      "est_cer": 0.012,
+      "lr": 2.000280905969278e-05
+    },
+    {
+      "epoch": 9,
+      "global_step": 1071,
+      "train_loss": 0.0682,
+      "eval_loss": 0.0655,
+      "est_cer": 0.012,
+      "lr": 5.869876628632237e-06
+    },
+    {
+      "epoch": 10,
+      "global_step": 1190,
+      "train_loss": 0.0673,
+      "eval_loss": 0.0649,
+      "est_cer": 0.012,
+      "lr": 1e-06
+    }
+  ]
+}

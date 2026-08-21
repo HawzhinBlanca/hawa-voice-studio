@@ -17,9 +17,11 @@ data/*.db
 data/*.db-journal
 data/*.db-wal
 
-# Fine-tuning data (too large for git)
+# Fine-tuning data & audio storage (too large for git)
 data/finetune/chunk_*/
+data/finetune/pilot_1000_wavs/
 data/finetune/*.jsonl
+data/storage/
 
 # Node
 node_modules/
