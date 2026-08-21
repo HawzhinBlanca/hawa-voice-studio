@@ -21,6 +21,8 @@ data/*.db-wal
 data/finetune/chunk_*/
 data/finetune/pilot_*_wavs/
 data/finetune/*.jsonl
+data/finetune/checkpoints_*/
+data/models/
 data/storage/
 output/
 
