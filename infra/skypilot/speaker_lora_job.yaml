@@ -1,0 +1,22 @@
+name: voxcpm2-speaker-lora
+
+resources:
+  accelerators: L40S:1
+  use_spot: true
+  disk_size: 80
+
+envs:
+  SPEAKER_ID: lamo
+  BASE_MODEL: s3://hawa-sorani-voice-assets/checkpoints/foundation_v1
+  DATASET_MANIFEST: s3://hawa-sorani-voice-assets/datasets/speakers/lamo/manifest.jsonl
+  OUTPUT_DIR: s3://hawa-sorani-voice-assets/adapters/lamo_v1
+
+run: |
+  python -u ml/training/train_voxcpm_lora.py \
+    --dataset_manifest ${DATASET_MANIFEST} \
+    --base_model ${BASE_MODEL} \
+    --output_dir ${OUTPUT_DIR} \
+    --lora_rank 32 \
+    --lora_alpha 64 \
+    --learning_rate 2e-4 \
+    --max_steps 10000

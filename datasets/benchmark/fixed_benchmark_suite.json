@@ -1,0 +1,66 @@
+{
+  "suite_name": "Hawa Sorani TTS Golden Benchmark Suite 2026",
+  "version": "1.0.0",
+  "locked_date": "2026-08-21",
+  "categories": {
+    "core_sorani": [
+      {
+        "id": "core_01",
+        "category": "difficult_phonemes_velar_l",
+        "text_raw": "ڕۆڵەی دڵسۆزی گەلەکەمان بۆ هەمیشە لە دڵماندا دەمێنێتەوە.",
+        "text_normalized": "ڕۆڵەی دڵسۆزی گەلەکەمان بۆ هەمیشە لە دڵماندا دەمێنێتەوە.",
+        "phoneme_focus": ["ɫ", "r", "eː"]
+      },
+      {
+        "id": "core_02",
+        "category": "vowel_pairs",
+        "text_raw": "شێوەزاری سۆرانی تایبەتمەندی دەنگی دەوڵەمەندی هەیە.",
+        "text_normalized": "شێوەزاری سۆرانی تایبەتمەندی دەنگی دەوڵەمەندی هەیە.",
+        "phoneme_focus": ["eː", "oː", "uː", "iː"]
+      }
+    ],
+    "production_text": [
+      {
+        "id": "prod_01",
+        "category": "dates_and_currencies",
+        "text_raw": "لە ٢٠٢٦/٠٨/٢١ نرخی هەر پشکێک گەیشتە $125.75 لە بۆرسەدا.",
+        "text_normalized": "لە بیست و یەکی ئابی ساڵی دوو هەزار و بیست و شەش نرخی هەر پشکێک گەیشتە سەد و بیست و پێنج دۆلار و حەفتا و پێنج سەنت لە بۆرسەدا.",
+        "test_type": "number_expansion"
+      },
+      {
+        "id": "prod_02",
+        "category": "iqd_currency",
+        "text_raw": "کۆی تێچووی پڕۆژەکە 250,000,000 د.ع بوو.",
+        "text_normalized": "کۆی تێچووی پڕۆژەکە دووسەد و پەنجا ملیۆن دیناری عێراقی بوو.",
+        "test_type": "currency_iqd"
+      },
+      {
+        "id": "prod_03",
+        "category": "foreign_tech_names",
+        "text_raw": "سیستەمی FastAPI و Next.js پێکەوە لەگەڵ مۆدێلی VoxCPM2 بەکاردەهێنرێن.",
+        "text_normalized": "سیستەمی فاست ئەی پی ئای و نێکست جەی ئێس پێکەوە لەگەڵ مۆدێلی ڤۆکس سی پی ئێم بەکاردەهێنرێن.",
+        "test_type": "foreign_loanwords"
+      }
+    ],
+    "expressive_speech": [
+      {
+        "id": "expr_01",
+        "style": "warm_documentary",
+        "text_raw": "لە قوڵایی مێژوودا، دەنگی سروشتی کوردستان هەمیشە زیندوو بووە.",
+        "target_emotion": "calm_warm"
+      },
+      {
+        "id": "expr_02",
+        "style": "energetic_promotional",
+        "text_raw": "ئێستا دەتوانیت بە باشترین کوالیتی دەنگی کوردی بەرهەم بهێنیت!",
+        "target_emotion": "excited_confident"
+      },
+      {
+        "id": "expr_03",
+        "style": "serious_news",
+        "text_raw": "ڕاپۆرتی نوێی کەشناسی ئاگاداری دەدات لە بارانبارینی بەخوڕ.",
+        "target_emotion": "authoritative"
+      }
+    ]
+  }
+}

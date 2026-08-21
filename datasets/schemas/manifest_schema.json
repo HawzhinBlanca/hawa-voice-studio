@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "HawaSoraniVoiceUtteranceRecord",
+  "type": "object",
+  "required": [
+    "utterance_id",
+    "speaker_id",
+    "audio_uri",
+    "raw_text",
+    "normalized_text",
+    "duration_seconds",
+    "dataset_version"
+  ],
+  "properties": {
+    "utterance_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "speaker_id": {
+      "type": "string"
+    },
+    "audio_uri": {
+      "type": "string"
+    },
+    "raw_text": {
+      "type": "string"
+    },
+    "normalized_text": {
+      "type": "string"
+    },
+    "duration_seconds": {
+      "type": "number",
+      "minimum": 1.0,
+      "maximum": 30.0
+    },
+    "style": {
+      "type": "string",
+      "enum": [
+        "neutral",
+        "warm_conversational",
+        "authoritative_documentary",
+        "energetic_promotional",
+        "empathetic",
+        "happy",
+        "sad",
+        "urgent",
+        "whisper"
+      ]
+    },
+    "dialect": {
+      "type": "string",
+      "enum": ["slemani", "erbil", "badini", "mukri", "standard_ckb"]
+    },
+    "source": {
+      "type": "string"
+    },
+    "quality_status": {
+      "type": "string",
+      "enum": ["approved", "pending_review", "rejected", "retake_requested"]
+    },
+    "dataset_version": {
+      "type": "string"
+    }
+  }
+}

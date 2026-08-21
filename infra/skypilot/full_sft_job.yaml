@@ -1,0 +1,19 @@
+name: voxcpm2-sorani-full-sft
+
+resources:
+  accelerators: A100-80GB:8
+  use_spot: false
+  disk_size: 500
+
+envs:
+  BASE_MODEL: openbmb/VoxCPM2
+  DATASET_MANIFEST: s3://hawa-sorani-voice-assets/datasets/ckb_foundation_500h/manifest.jsonl
+  OUTPUT_DIR: s3://hawa-sorani-voice-assets/checkpoints/foundation_sft_v1
+  MAX_STEPS: 50000
+
+run: |
+  torchrun --nproc_per_node=8 ml/training/train_voxcpm_sft.py \
+    --dataset_manifest ${DATASET_MANIFEST} \
+    --replay_ratio 0.15 \
+    --output_dir ${OUTPUT_DIR} \
+    --max_steps ${MAX_STEPS}

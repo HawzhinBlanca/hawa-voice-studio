@@ -1,0 +1,28 @@
+name: voxcpm2-sorani-lora-pilot
+
+resources:
+  accelerators: L40S:1
+  use_spot: true
+  disk_size: 100
+
+envs:
+  BASE_MODEL: openbmb/VoxCPM2
+  DATASET_MANIFEST: s3://hawa-sorani-voice-assets/datasets/ckb_pilot/manifest.jsonl
+  OUTPUT_DIR: s3://hawa-sorani-voice-assets/checkpoints/pilot_lora
+  WANDB_PROJECT: hawa-sorani-voice
+  MAX_STEPS: 20000
+
+setup: |
+  conda activate voxcpm || conda create -n voxcpm python=3.11 -y && conda activate voxcpm
+  pip install torch torchaudio --index-url https://download.pytorch.org/whl/cu121
+  pip install -r requirements.txt
+
+run: |
+  python -u ml/training/train_voxcpm_lora.py \
+    --dataset_manifest ${DATASET_MANIFEST} \
+    --base_model ${BASE_MODEL} \
+    --output_dir ${OUTPUT_DIR} \
+    --lora_rank 16 \
+    --lora_alpha 32 \
+    --learning_rate 1e-4 \
+    --max_steps ${MAX_STEPS}
