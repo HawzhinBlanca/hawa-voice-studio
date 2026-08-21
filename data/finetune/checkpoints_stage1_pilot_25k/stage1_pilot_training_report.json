@@ -1,0 +1,65 @@
+{
+  "status": "completed",
+  "device": "cuda",
+  "gpu_name": "NVIDIA GeForce RTX 4090",
+  "dataset_name": "chunk_7_kurdish_speech_stage1_pilot",
+  "total_utterances": 23550,
+  "total_hours": 39.05,
+  "train_utterances": 22372,
+  "eval_utterances": 1178,
+  "epochs": 5,
+  "batch_size": 16,
+  "total_steps": 6995,
+  "total_training_time_seconds": 6269.68,
+  "final_train_loss": 0.0356,
+  "final_eval_loss": 0.0314,
+  "best_eval_loss": 0.0314,
+  "final_est_cer": 0.01,
+  "training_history": [
+    {
+      "epoch": 1,
+      "global_step": 1399,
+      "epoch_duration_seconds": 456.95,
+      "train_loss": 0.285,
+      "eval_loss": 0.0849,
+      "est_cer": 0.01,
+      "lr": 0.000271448040659054
+    },
+    {
+      "epoch": 2,
+      "global_step": 2798,
+      "epoch_duration_seconds": 215.35,
+      "train_loss": 0.063,
+      "eval_loss": 0.0758,
+      "est_cer": 0.01,
+      "lr": 0.0001966980406590543
+    },
+    {
+      "epoch": 3,
+      "global_step": 4197,
+      "epoch_duration_seconds": 1514.08,
+      "train_loss": 0.0469,
+      "eval_loss": 0.0408,
+      "est_cer": 0.01,
+      "lr": 0.000104301959340945
+    },
+    {
+      "epoch": 4,
+      "global_step": 5596,
+      "epoch_duration_seconds": 2223.41,
+      "train_loss": 0.0387,
+      "eval_loss": 0.0332,
+      "est_cer": 0.01,
+      "lr": 2.9551959340945207e-05
+    },
+    {
+      "epoch": 5,
+      "global_step": 6995,
+      "epoch_duration_seconds": 1859.84,
+      "train_loss": 0.0356,
+      "eval_loss": 0.0314,
+      "est_cer": 0.01,
+      "lr": 1e-06
+    }
+  ]
+}

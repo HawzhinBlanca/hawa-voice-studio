@@ -19,7 +19,7 @@ data/*.db-wal
 
 # Fine-tuning data & audio storage (too large for git)
 data/finetune/chunk_*/
-data/finetune/pilot_1000_wavs/
+data/finetune/pilot_*_wavs/
 data/finetune/*.jsonl
 data/storage/
 
