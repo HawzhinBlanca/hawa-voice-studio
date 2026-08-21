@@ -77,7 +77,7 @@ class AudioSealWatermark:
         """
         Detect whether a specific 16-bit payload exists in the audio samples via matched-filter correlation.
         """
-        if not samples or len(samples) < 1000:
+        if samples is None or len(samples) < 1000:
             return WatermarkResult(False, None, 0.0, "Audio too short for detection")
 
         candidate_payload = candidate_payload & 0xFFFF

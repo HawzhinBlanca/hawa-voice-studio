@@ -17,6 +17,10 @@ data/*.db
 data/*.db-journal
 data/*.db-wal
 
+# Fine-tuning data (too large for git)
+data/finetune/chunk_*/
+data/finetune/*.jsonl
+
 # Node
 node_modules/
 .next/
