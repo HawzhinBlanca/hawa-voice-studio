@@ -1,0 +1,36 @@
+# Hawa Voice Studio -- VoxCPM2 LoRA Fine-Tuning: Chunk 8 Continuation
+# Trains on NVIDIA GeForce RTX 4090 (24GB VRAM)
+
+pretrained_path: "data/models/VoxCPM2"
+train_manifest: "data/finetune/voxcpm2_chunk8_train_manifest.jsonl"
+val_manifest: "data/finetune/voxcpm2_chunk8_val_manifest.jsonl"
+sample_rate: 16000        # AudioVAE encoder input rate
+out_sample_rate: 48000    # AudioVAE decoder output rate (48kHz broadcast master)
+batch_size: 4
+grad_accum_steps: 4       # Effective batch size = 16
+num_workers: 4
+num_iters: 5000
+log_interval: 20
+valid_interval: 250
+save_interval: 500
+learning_rate: 0.00008    # Slightly lower LR for progressive refinement
+weight_decay: 0.01
+warmup_steps: 100
+max_steps: 5000
+max_batch_tokens: 0
+max_grad_norm: 1.0
+save_path: "data/finetune/checkpoints_voxcpm2_chunk8_lora"
+tensorboard: "data/finetune/checkpoints_voxcpm2_chunk8_lora/logs"
+
+lambdas:
+  loss/diff: 1.0
+  loss/stop: 1.0
+
+# LoRA configuration
+lora:
+  enable_lm: true
+  enable_dit: true
+  enable_proj: true
+  r: 16
+  alpha: 32
+  dropout: 0.05
